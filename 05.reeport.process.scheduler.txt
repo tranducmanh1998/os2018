@@ -1,0 +1,34 @@
+tranmanh@tranmanh-SVE14A25CVB:~$ cat /proc/sched_debug | grep systemd
+         systemd     1       320.440950      1640   120         0.000000      1196.639567         0.000000 0 0 /autogroup-2
+ systemd-journal   263        53.788780       979   120         0.000000       291.654477         0.000000 0 0 /autogroup-7
+   systemd-udevd   286       525.980328       591   120         0.000000       305.799999         0.000000 0 0 /autogroup-12
+ systemd-timesyn   525        -2.188533        45   120         0.000000        12.980975         0.000000 0 0 /autogroup-30
+  systemd-logind   817        19.862121       645   120         0.000000        89.175163         0.000000 0 0 /autogroup-42
+         systemd  1182         9.855081        18   120         0.000000        18.881582         0.000000 0 0 /autogroup-98
+tranmanh@tranmanh-SVE14A25CVB:~$ cat /proc/1182/sched
+systemd (1182, #threads: 1)
+-------------------------------------------------------------------
+se.exec_start                                :       1127687.756349
+se.vruntime                                  :             9.855081
+se.sum_exec_runtime                          :            18.881582
+se.nr_migrations                             :                    5
+nr_switches                                  :                   18
+nr_voluntary_switches                        :                   15
+nr_involuntary_switches                      :                    3
+se.load.weight                               :              1048576
+se.avg.load_sum                              :               195584
+se.avg.util_sum                              :               113664
+se.avg.load_avg                              :                    0
+se.avg.util_avg                              :                    0
+se.avg.last_update_time                      :        1127687756349
+policy                                       :                    0
+prio                                         :                  120
+clock-delta                                  :                   66
+mm->numa_scan_seq                            :                    0
+numa_pages_migrated                          :                    0
+numa_preferred_nid                           :                   -1
+total_numa_faults                            :                    0
+current_node=0, numa_group_id=0
+numa_faults node=0 task_private=0 task_shared=0 group_private=0 group_shared=0
+tranmanh@tranmanh-SVE14A25CVB:~$ 
+
