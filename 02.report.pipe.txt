@@ -1,0 +1,14 @@
+tranmanh@tranmanh-SVE14A25CVB:~$ ls
+Desktop    Downloads         Music   Pictures  Templates
+Documents  examples.desktop  os2018  Public    Videos
+tranmanh@tranmanh-SVE14A25CVB:~$ ls | grep list
+tranmanh@tranmanh-SVE14A25CVB:~$ wc -l /etc/passwd
+43 /etc/passwd
+tranmanh@tranmanh-SVE14A25CVB:~$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:           3822         943        1850         248        1028        2368
+Swap:          7627           0        7627
+tranmanh@tranmanh-SVE14A25CVB:~$ grep -m 1 'cpu cores' /proc/cpuinfo
+cpu cores	: 2
+tranmanh@tranmanh-SVE14A25CVB:~$ find -iname ".jpg" | wc -l
+0
